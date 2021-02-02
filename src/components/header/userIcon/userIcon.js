@@ -1,6 +1,5 @@
-import React from "react";
 import * as AiIcons from "react-icons/ai";
-import "./userIcon.css";
+import "components/header/userIcon/userIcon.css";
 
 const UserIcon = () => (
   <div className="user-icon">

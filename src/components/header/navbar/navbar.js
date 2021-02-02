@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./navbar.css";
+import "components/header/navbar/navbar.css";
 import Media from "react-media";
-import SideBar from "./sideBar/sideBar.js";
-import SimpleMenu from "./menu/menu.js";
-import { navbarData } from "./data/navbarData.js";
+import SimpleMenu from "components/header/navbar/simpleMenu/simpleMenu.js";
+import { navbarData } from "components/header/navbar/data/navbarData.js";
 
 const Navbar = () => {
   return (

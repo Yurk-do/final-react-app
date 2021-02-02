@@ -1,5 +1,5 @@
 import React from "react";
-import "./registrationButtons.css";
+import "components/header/registrationButtons/registrationButtons.css";
 
 const RegistrationButtons = (props) => (
   <div id="registration-block">

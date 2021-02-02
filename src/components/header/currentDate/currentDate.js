@@ -1,6 +1,6 @@
 import React from "react";
-import DateFormat from "./dateFormat.js";
-import "./currentDate.css";
+import DateFormat from "components/header/currentDate/dateFormat.js";
+import "components/header/currentDate/currentDate.css";
 
 class CurrentDate extends React.Component {
   constructor(props) {

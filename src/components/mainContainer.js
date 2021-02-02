@@ -1,10 +1,10 @@
 import React from "react";
-import HeaderBlock from "./homepage/header/headerBlock/headerBlock.js";
-import Navbar from "./homepage/header/navbar/navbar.js";
+import HeaderBlock from "components/header/headerBlock/headerBlock.js";
+import Navbar from "components/header/navbar/navbar.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./homepage/header/navbar/home.js";
-import Products from "./homepage/header/navbar/products.js";
-import Reports from "./homepage/header/navbar/reports.js";
+import Home from "components/Pages/home/home.js";
+import News from "components/Pages/news/news.js";
+import Policy from "components/Pages/policy/policy.js";
 
 const MainContainer = (props) => (
   <>
@@ -13,8 +13,8 @@ const MainContainer = (props) => (
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/reports" component={Reports} />
-        <Route path="/products" component={Products} />
+        <Route path="/reports" component={News} />
+        <Route path="/products" component={Policy} />
       </Switch>
     </Router>
   </>

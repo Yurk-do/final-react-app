@@ -1,5 +1,5 @@
 import React from "react";
-import "./mainTitle.css";
+import "components/header/mainTitle/mainTitle.css";
 
 const MainTitle = (props) => (
   <div id="main-title-container">

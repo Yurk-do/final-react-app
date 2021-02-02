@@ -26,6 +26,9 @@
   .nav-text {
     margin-bottom: 20px;
   }
+  .nav-text > a > svg {
+    font-size: 25px;
+  }
   
   .nav-text a {
     text-decoration: none;

@@ -1,6 +1,9 @@
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
+import * as BiIcons from "react-icons/bi";
+import * as HiIcons from "react-icons/hi";
+import * as ImIcons from "react-icons/im";
+import * as RiIcons from "react-icons/ri";
 
 export const navbarData = [
   {
@@ -12,37 +15,37 @@ export const navbarData = [
   {
     title: "Policy",
     path: "/policy",
-    icon: <IoIcons.IoIosPaper />,
+    icon: <BiIcons.BiWorld />,
     className: "nav-text",
   },
   {
     title: "Commentary",
     path: "/commentary",
-    icon: <FaIcons.FaCartPlus />,
+    icon: <FaIcons.FaComments />,
     className: "nav-text",
   },
   {
     title: "Sports",
     path: "/sports",
-    icon: <IoIcons.IoMdPeople />,
+    icon: <FaIcons.FaFootballBall />,
     className: "nav-text",
   },
   {
     title: "Reports",
     path: "/specialReports",
-    icon: <FaIcons.FaEnvelopeOpenText />,
+    icon: <HiIcons.HiOutlineDocumentReport />,
     className: "nav-text",
   },
   {
     title: "Podcasts",
     path: "/podcasts",
-    icon: <IoIcons.IoMdHelp />,
+    icon: <ImIcons.ImPodcast />,
     className: "nav-text",
   },
   {
     title: "Games",
     path: "/games",
-    icon: <IoIcons.IoMdHelp />,
+    icon: <RiIcons.RiGameLine />,
     className: "nav-text",
   },
 ];

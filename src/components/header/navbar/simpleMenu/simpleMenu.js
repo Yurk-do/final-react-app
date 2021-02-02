@@ -1,5 +1,4 @@
-import React from "react";
-import "./simpleMenu.css";
+import "components/header/navbar/simpleMenu/simpleMenu.css";
 import { Link } from "react-router-dom";
 
 const SimpleMenu = ({ navbarData }) => {
