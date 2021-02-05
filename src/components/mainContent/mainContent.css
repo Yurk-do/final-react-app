@@ -1,0 +1,28 @@
+
+.main-news-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-left-news {
+    flex-basis: 110px;
+}
+
+.main-left-news > img {
+    display: block;
+    max-width: 300px;
+}
+.main-center-news {
+    flex-basis: 380px;
+}
+.main-center-news > img {
+    display: block;
+    max-width: 600px;
+}
+.main-right-news {
+    flex-basis: 110px;
+}
+.main-right-news > img {
+    display: block;
+    max-width: 300px;
+}

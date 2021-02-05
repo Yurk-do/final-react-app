@@ -1,7 +1,8 @@
 import React from "react";
+import MainContent from "components/mainContent/mainContent.js";
 
 function News() {
-  return <div>News</div>;
+  return <MainContent />;
 }
 
 export default News;
