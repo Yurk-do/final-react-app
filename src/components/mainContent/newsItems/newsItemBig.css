@@ -1,0 +1,12 @@
+.item-medium-img {
+    max-width: 300px;
+    max-height: 250px;
+   }
+   .item-medium-title {
+       font-size: 20px;
+       font-weight: 700;
+   }
+   .item-medium-content {
+       font-size: 15px;
+       font-weight: 400;
+   }

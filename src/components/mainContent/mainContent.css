@@ -1,7 +1,7 @@
-
 .main-news-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main-left-news {
@@ -17,7 +17,7 @@
 }
 .main-center-news > img {
     display: block;
-    max-width: 600px;
+    max-width: 500px;
 }
 .main-right-news {
     flex-basis: 110px;

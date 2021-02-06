@@ -28,7 +28,6 @@ function App() {
           <Route path="/games" component={Games} />
         </Switch>
       </Router>
-      <MainContent />
     </>
   );
 }
