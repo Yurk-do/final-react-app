@@ -11,8 +11,13 @@ body {
   font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: 400;
   color: #000;
+  width: 100%;
+  margin: 0;
 }
 
+#root {
+  width: 100%;
+}
 
 a {
   color: black;

@@ -1,6 +1,10 @@
 import React from "react";
-import "./mainContent.css";
-import MainNews from "components/mainContent/mainNews/mainNews.js";
+import NewsBlock from "components/mainContent/mainNews/newsBlock.js";
+import ColumnNews from "components/mainContent/mainNews/columnNews.js";
+import RowNews from "components/mainContent/mainNews/RowNews.js";
+import dateISOFormat from "components/helpers/date/dateISOFormat.js";
+import NewsDay from "components/mainContent/mainNews/newsDay.js";
+import replaceContent from "components/helpers/content/replaceContent.js";
 
 class MainContent extends React.Component {
   constructor(props) {
@@ -16,7 +20,7 @@ class MainContent extends React.Component {
 
   componentDidMount() {
     fetch(
-      "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=b110ac5d66d74d8a94eb3c2e4192fdb6"
+      "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -26,7 +30,7 @@ class MainContent extends React.Component {
       .catch((err) => console.log(err));
 
     fetch(
-      "http://newsapi.org/v2/everything?q=tesla&from=2021-01-06&sortBy=publishedAt&apiKey=b110ac5d66d74d8a94eb3c2e4192fdb6"
+      "http://newsapi.org/v2/everything?q=tesla&from=2021-01-06&sortBy=publishedAt&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -35,7 +39,7 @@ class MainContent extends React.Component {
       .catch((err) => console.log(err));
 
     fetch(
-      "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b110ac5d66d74d8a94eb3c2e4192fdb6"
+      "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -43,7 +47,7 @@ class MainContent extends React.Component {
       })
       .catch((err) => console.log(err));
     fetch(
-      "http://newsapi.org/v2/everything?q=apple&from=2021-02-05&to=2021-02-05&sortBy=popularity&apiKey=b110ac5d66d74d8a94eb3c2e4192fdb6"
+      "http://newsapi.org/v2/everything?q=apple&from=2021-02-05&to=2021-02-05&sortBy=popularity&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -51,7 +55,7 @@ class MainContent extends React.Component {
       })
       .catch((err) => console.log(err));
     fetch(
-      "http://newsapi.org/v2/everything?domains=wsj.com&apiKey=b110ac5d66d74d8a94eb3c2e4192fdb6"
+      "http://newsapi.org/v2/everything?domains=wsj.com&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -63,31 +67,32 @@ class MainContent extends React.Component {
   render() {
     return (
       <>
-        <MainNews
-          news={this.state.articlesTechCr}
-          mainClass={"main-news-container"}
-          cNames={["main-left-news", "main-center-news", "main-right-news"]}
-        />
-        <MainNews
-          news={this.state.articlesTesla}
-          mainClass={"main-news-container"}
-          cNames={["main-left-news", "main-center-news", "main-right-news"]}
-        />
-        <MainNews
-          news={this.state.articlesUSA}
-          mainClass={"main-news-container"}
-          cNames={["main-left-news", "main-center-news", "main-right-news"]}
-        />
-        <MainNews
-          news={this.state.articlesApple}
-          mainClass={"main-news-container"}
-          cNames={["main-left-news", "main-center-news", "main-right-news"]}
-        />
-        <MainNews
-          news={this.state.articlesWSJ}
-          mainClass={"main-news-container"}
-          cNames={["main-left-news", "main-center-news", "main-right-news"]}
-        />
+        <NewsBlock classContainer={"row"}>
+          <ColumnNews
+            news={this.state.articlesTechCr}
+            classColumn={"side"}
+            classItem={"small"}
+            lotOfArticles={4}
+          />
+          <ColumnNews
+            news={this.state.articlesApple}
+            classColumn={"center"}
+            classItem={"big"}
+            lotOfArticles={1}
+          >
+            {/* <NewsDay /> */}
+          </ColumnNews>
+          <ColumnNews
+            news={this.state.articlesApple}
+            classColumn={"side"}
+            classItem={"small"}
+            lotOfArticles={4}
+          />
+        </NewsBlock>
+        <NewsBlock classContainer={"column"}>
+          <RowNews news={this.state.articlesApple} lotOfArticles={5} />
+          <RowNews news={this.state.articlesApple} lotOfArticles={5} />
+        </NewsBlock>
       </>
     );
   }
@@ -102,6 +107,9 @@ function createNews(news) {
     description: article.description,
     id: index,
     urlToImage: article.urlToImage,
+    content: replaceContent(article.content),
+    category: article.source.name,
+    date: dateISOFormat(article.publishedAt),
   }));
   return newNews;
 }

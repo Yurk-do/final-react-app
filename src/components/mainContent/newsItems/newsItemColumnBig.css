@@ -1,0 +1,23 @@
+.item-column-big-article {
+position: relative;
+width: 100%;
+
+}
+
+.item-column-big-img {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+   }
+.item-column-big-title {
+       font-size: 20px;
+       font-weight: 700;
+       text-align: center;
+   }
+.item-column-big-content {
+       font-size: 15px;
+       font-weight: 400;
+       text-align: justify;
+       margin-left: 10px;
+       margin-right: 10px;
+   }

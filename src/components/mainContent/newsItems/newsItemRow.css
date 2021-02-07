@@ -1,0 +1,29 @@
+.item-row {
+    max-width: 20%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+.item-row:not(:last-child) {
+    margin-right: 10px;
+}
+.item-row-image {
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.item-row-title {
+    min-height: 70px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.item-row-date{
+   text-align: end;
+}
+.link-news {
+    text-align: end;
+    color: rgb(122, 122, 52)
+}

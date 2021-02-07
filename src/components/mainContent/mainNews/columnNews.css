@@ -1,0 +1,19 @@
+.news-column-side {
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-column-side > img {
+    display: block;
+    max-width: 300px;
+}
+.news-column-center {
+ flex-basis: 600px;
+ border-bottom: dotted 1px black;
+}
+.news-column-center > img {
+    display: block;
+    max-width: 500px;
+}
