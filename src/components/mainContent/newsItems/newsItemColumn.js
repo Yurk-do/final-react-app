@@ -2,7 +2,7 @@ import React from "react";
 import "components/mainContent/newsItems/newsItemColumnSmall.css";
 import "components/mainContent/newsItems/newsItemColumnBig.css";
 
-function NewsItemColumn({ classItem, title, image, content }) {
+function NewsItemColumn({ classItem, title, image, content, url }) {
   return (
     <div className={`item-column-${classItem}-article`}>
       <img
@@ -10,7 +10,9 @@ function NewsItemColumn({ classItem, title, image, content }) {
         alt="article"
         className={`item-column-${classItem}-img`}
       />
-      <p className={`item-column-${classItem}-title`}>{title}</p>
+      <h2 className={`item-column-${classItem}-title`}>
+        <a href={url}>{title}</a>
+      </h2>
       <p className={`item-column-${classItem}-content`}>{content}</p>
     </div>
   );

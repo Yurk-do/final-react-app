@@ -14,6 +14,7 @@ function ColumnNews(props) {
               title={article.title}
               image={article.urlToImage}
               content={article.content}
+              url={article.url}
             />
           );
       })}

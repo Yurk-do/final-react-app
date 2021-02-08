@@ -5,6 +5,7 @@ import RowNews from "components/mainContent/mainNews/RowNews.js";
 import dateISOFormat from "components/helpers/date/dateISOFormat.js";
 import NewsDay from "components/mainContent/mainNews/newsDay.js";
 import replaceContent from "components/helpers/content/replaceContent.js";
+import SliderQuote from "components/sliderQuote/sliderQuote.js";
 
 class MainContent extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class MainContent extends React.Component {
 
   componentDidMount() {
     fetch(
-      "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
+      "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -30,7 +31,7 @@ class MainContent extends React.Component {
       .catch((err) => console.log(err));
 
     fetch(
-      "http://newsapi.org/v2/everything?q=tesla&from=2021-01-06&sortBy=publishedAt&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
+      "http://newsapi.org/v2/everything?q=tesla&from=2021-01-06&sortBy=publishedAt&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -39,7 +40,7 @@ class MainContent extends React.Component {
       .catch((err) => console.log(err));
 
     fetch(
-      "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
+      "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -47,7 +48,7 @@ class MainContent extends React.Component {
       })
       .catch((err) => console.log(err));
     fetch(
-      "http://newsapi.org/v2/everything?q=apple&from=2021-02-05&to=2021-02-05&sortBy=popularity&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
+      "http://newsapi.org/v2/everything?q=apple&from=2021-02-05&to=2021-02-05&sortBy=popularity&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -55,7 +56,7 @@ class MainContent extends React.Component {
       })
       .catch((err) => console.log(err));
     fetch(
-      "http://newsapi.org/v2/everything?domains=wsj.com&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
+      "http://newsapi.org/v2/everything?domains=wsj.com&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
     )
       .then((response) => response.json())
       .then((news) => {
@@ -89,6 +90,7 @@ class MainContent extends React.Component {
             lotOfArticles={4}
           />
         </NewsBlock>
+        <SliderQuote />
         <NewsBlock classContainer={"column"}>
           <RowNews news={this.state.articlesApple} lotOfArticles={5} />
           <RowNews news={this.state.articlesApple} lotOfArticles={5} />
@@ -110,6 +112,7 @@ function createNews(news) {
     content: replaceContent(article.content),
     category: article.source.name,
     date: dateISOFormat(article.publishedAt),
+    url: article.url,
   }));
   return newNews;
 }

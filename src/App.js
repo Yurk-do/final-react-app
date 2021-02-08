@@ -10,7 +10,7 @@ import Sports from "components/Pages/sports/sports.js";
 import Reports from "components/Pages/reports/reports.js";
 import Podcasts from "components/Pages/podcasts/podcasts.js";
 import Games from "components/Pages/games/games.js";
-import MainContent from "components/mainContent/mainContent.js";
+import Footer from "components/footer/footer.js";
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
           <Route path="/games" component={Games} />
         </Switch>
       </Router>
+      <Footer />
     </>
   );
 }

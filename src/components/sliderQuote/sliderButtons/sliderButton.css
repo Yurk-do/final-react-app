@@ -1,0 +1,23 @@
+
+.slider-button-prev, .slider-button-next {
+  cursor: pointer;
+  font-size: 40px;
+  width: 20%;
+}
+
+
+.prev:hover, .next:hover {
+  opacity: 0.5;
+  color: red;
+}
+
+.slider-button-prev {
+  text-align: start;
+}
+
+.slider-button-next {
+  text-align: end;
+}
+
+
+

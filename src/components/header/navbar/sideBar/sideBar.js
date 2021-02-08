@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import "components/header/navbar/sideBar/sideBar.css";
 import { IconContext } from "react-icons";
 import { navbarData } from "components/header/navbar/data/navbarData.js";
+import LinksSocialNet from "components/linksSocialNet/linksSocialNet.js";
+import Copyright from "components/footer/copyright.js";
 
 const SideBar = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -37,6 +39,8 @@ const SideBar = () => {
               );
             })}
           </ul>
+          <LinksSocialNet />
+          <Copyright />
         </nav>
       </IconContext.Provider>
     </>
