@@ -1,10 +1,13 @@
 import React from "react";
 import "components/contentForCategory/contentCategoryPage.css";
+import sliceContent from "components/helpers/content/sliceContent.js";
 
 function ContentCategoryPage({ news }) {
   return (
     <div className="category-news-item">
-      <h1 className="category-news-item-title">{news.title}</h1>
+      <h3 className="category-news-item-title">
+        {sliceContent(news.title, 100)}
+      </h3>
       <img
         src={news.urlToImage}
         alt="article"

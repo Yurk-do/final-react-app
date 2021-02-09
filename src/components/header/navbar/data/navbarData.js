@@ -44,8 +44,8 @@ export const navbarData = [
     className: "nav-text",
   },
   {
-    title: "Contacts",
-    path: "/contacts",
+    title: "Comments",
+    path: "/comments",
     icon: <RiIcons.RiContactsBookFill />,
     className: "nav-text",
   },

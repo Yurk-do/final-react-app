@@ -1,3 +1,17 @@
+
+.link-row-block-article-title {
+    display: block;
+    width: 100%;
+}
+
+.row-block-article-title {
+    text-align: center;
+    height: 30px;
+    background-color: rgb(160, 144, 144);
+    line-height: 30px;
+    width: 100%;
+}
+
 .row-block-news {
     display: flex;
     flex-flow: row nowrap;

@@ -15,9 +15,13 @@
 }
 
 .item-row-title {
-    min-height: 70px;
+    min-height: 45px;
     font-size: 15px;
     text-align: justify;
+}
+
+.item-row-title > a:hover {
+    color:rgb(119, 81, 81)
 }
 
 .item-row-date{

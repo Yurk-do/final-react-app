@@ -9,7 +9,7 @@ import Tesla from "components/Pages/tesla/tesla.js";
 import USANews from "components/Pages/usaNews/usaNews.js";
 import Apple from "components/Pages/apple/apple.js";
 import WSjournal from "components/Pages/wsJournal/wsJournal.js";
-import Contacts from "components/Pages/contacts/contacts.js";
+import Comments from "components/Pages/comments/comments.js";
 import Footer from "components/footer/footer.js";
 import dateISOFormat from "components/helpers/date/dateISOFormat.js";
 import replaceContent from "components/helpers/content/replaceContent.js";
@@ -45,19 +45,19 @@ class App extends React.Component {
   componentDidMount() {
     Promise.all([
       fetch(
-        "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=659d2838fd104d568efdd7e5bed7a04f"
+        "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
       ),
       fetch(
-        "http://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
+        "http://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
       ),
       fetch(
-        "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
+        "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
       ),
       fetch(
-        "http://newsapi.org/v2/everything?q=apple&from=2021-02-08&to=2021-02-08&sortBy=popularity&apiKey=659d2838fd104d568efdd7e5bed7a04f"
+        "http://newsapi.org/v2/everything?q=apple&from=2021-02-08&to=2021-02-08&sortBy=popularity&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
       ),
       fetch(
-        "http://newsapi.org/v2/everything?domains=wsj.com&apiKey=659d2838fd104d568efdd7e5bed7a04f"
+        "http://newsapi.org/v2/everything?domains=wsj.com&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
       ),
     ])
       .then(([res1, res2, res3, res4, res5]) =>
@@ -79,56 +79,6 @@ class App extends React.Component {
         })
       );
   }
-
-  // componentDidMount() {
-  //   fetch(
-  //     "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((news) => {
-  //       console.log(news);
-  //       this.setState({ articlesTechCr: createNews(news) });
-  //     })
-  //     .catch((err) => console.log(err));
-
-  //   fetch(
-  //     "http://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((news) => {
-  //       console.log(news);
-  //       this.setState({ articlesTesla: createNews(news) });
-  //     })
-  //     .catch((err) => console.log(err));
-
-  //   fetch(
-  //     "http://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((news) => {
-  //       console.log(news);
-  //       this.setState({ articlesUSA: createNews(news) });
-  //     })
-  //     .catch((err) => console.log(err));
-  //   fetch(
-  //     "http://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((news) => {
-  //       console.log(news);
-  //       this.setState({ articlesApple: createNews(news) });
-  //     })
-  //     .catch((err) => console.log(err));
-  //   fetch(
-  //     "http://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=fa6827649aa144fcb9fc384f5c7973d2"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((news) => {
-  //       console.log(news);
-  //       this.setState({ articlesWSJ: createNews(news) });
-  //     })
-  //     .catch((err) => console.log(err));
-  // }
 
   render() {
     return (
@@ -162,7 +112,7 @@ class App extends React.Component {
               path="/wsJournal"
               render={() => <WSjournal news={this.state.articlesWSJ} />}
             />
-            <Route path="/contacts" component={Contacts} />
+            <Route path="/comments" component={Comments} />
           </Switch>
         </Router>
         <Footer />

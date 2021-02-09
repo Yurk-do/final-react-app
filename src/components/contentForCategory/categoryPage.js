@@ -8,7 +8,8 @@ function CategoryPage({ news, title }) {
       <h2 className="category-news-title">{title}</h2>
       <div className="category-news-container">
         {news.map((article) => {
-          return <ContentCategoryPage news={article} key={article.id} />;
+          if (article.id < 9)
+            return <ContentCategoryPage news={article} key={article.id} />;
         })}
       </div>
     </div>

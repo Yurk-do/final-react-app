@@ -1,3 +1,12 @@
+
+.column-block-article-title {
+    text-align: center;
+    height: 30px;
+    background-color: rgb(160, 144, 144);
+    line-height: 30px;
+    margin: 2px
+}
+
 .news-column-side {
     flex-basis: 400px;
     display: flex;
@@ -17,3 +26,4 @@
     display: block;
     max-width: 500px;
 }
+

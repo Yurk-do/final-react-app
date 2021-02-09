@@ -1,6 +1,5 @@
 import React from "react";
-import "components/mainContent/newsItems/newsItemColumnSmall.css";
-import "components/mainContent/newsItems/newsItemColumnBig.css";
+import "components/mainContent/newsItems/newsItemColumn.css";
 
 function NewsItemColumn({ classItem, title, image, content, url }) {
   return (
