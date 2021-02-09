@@ -1,7 +1,7 @@
 const dateISOFormat = (dateTimeISO) => {
   const date = new Date(dateTimeISO);
-  const hour = date.getHours();
-  const minutes = date.getMinutes();
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
   const year = date.getFullYear();
   let month = date.getMonth() + 1;
   let dt = date.getDate();
@@ -12,7 +12,12 @@ const dateISOFormat = (dateTimeISO) => {
   if (month < 10) {
     month = "0" + month;
   }
-
+  if (hour < 10) {
+    hour = "0" + hour;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
   const dateFormat = year + "-" + month + "-" + dt + " " + hour + ":" + minutes;
   return dateFormat;
 };

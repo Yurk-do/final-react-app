@@ -25,10 +25,6 @@ a {
   cursor: pointer;
 }
 
-a:hover {
-  color: rgb(117, 93, 93);
-}
-
 input,
 button, 
 button:active, 

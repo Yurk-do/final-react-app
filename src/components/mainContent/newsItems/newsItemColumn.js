@@ -10,9 +10,9 @@ function NewsItemColumn({ classItem, title, image, content, url }) {
         alt="article"
         className={`item-column-${classItem}-img`}
       />
-      <h2 className={`item-column-${classItem}-title`}>
+      <h3 className={`item-column-${classItem}-title`}>
         <a href={url}>{title}</a>
-      </h2>
+      </h3>
       <p className={`item-column-${classItem}-content`}>{content}</p>
     </div>
   );

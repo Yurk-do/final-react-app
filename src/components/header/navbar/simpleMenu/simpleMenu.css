@@ -19,11 +19,14 @@
   align-items: center;
 }
 .simple-menu > li {
-  
- 
   margin: 0 15px 0 15px;
 }
 .simple-menu > li > a {
   font-size: 20px;
 color: white;
+}
+
+.simple-menu > li > a:hover {
+  font-size: 20px;
+color: black;
 }

@@ -1,51 +1,52 @@
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import * as BiIcons from "react-icons/bi";
-import * as HiIcons from "react-icons/hi";
+import * as GiIcons from "react-icons/gi";
+import * as GrIcons from "react-icons/gr";
 import * as ImIcons from "react-icons/im";
 import * as RiIcons from "react-icons/ri";
+import * as SiIcons from "react-icons/si";
 
 export const navbarData = [
   {
-    title: "News",
+    title: "Home",
     path: "/",
     icon: <AiIcons.AiFillHome />,
     className: "nav-text",
   },
   {
-    title: "Policy",
-    path: "/policy",
-    icon: <BiIcons.BiWorld />,
+    title: "Techcrunch",
+    path: "/techcrunch",
+    icon: <GiIcons.GiMechaHead />,
     className: "nav-text",
   },
   {
-    title: "Commentary",
-    path: "/commentary",
-    icon: <FaIcons.FaComments />,
+    title: "Tesla",
+    path: "/tesla",
+    icon: <SiIcons.SiTesla />,
     className: "nav-text",
   },
   {
-    title: "Sports",
-    path: "/sports",
-    icon: <FaIcons.FaFootballBall />,
+    title: "USANews",
+    path: "/usaNews",
+    icon: <FaIcons.FaFlagUsa />,
     className: "nav-text",
   },
   {
-    title: "Reports",
-    path: "/specialReports",
-    icon: <HiIcons.HiOutlineDocumentReport />,
+    title: "Apple",
+    path: "/apple",
+    icon: <GrIcons.GrApple />,
     className: "nav-text",
   },
   {
-    title: "Podcasts",
-    path: "/podcasts",
-    icon: <ImIcons.ImPodcast />,
+    title: "WSjournal",
+    path: "/wsjournal",
+    icon: <FaIcons.FaBusinessTime />,
     className: "nav-text",
   },
   {
-    title: "Games",
-    path: "/games",
-    icon: <RiIcons.RiGameLine />,
+    title: "Contacts",
+    path: "/contacts",
+    icon: <RiIcons.RiContactsBookFill />,
     className: "nav-text",
   },
 ];

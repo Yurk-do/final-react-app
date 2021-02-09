@@ -3,9 +3,9 @@ import NewsItemColumn from "components/mainContent/newsItems/newsItemColumn.js";
 import "components/mainContent/mainNews/columnNews.css";
 
 function ColumnNews(props) {
+  console.log(props.news);
   return (
     <div className={`news-column-${props.classColumn}`}>
-      {props.children ? props.children : null}
       {props.news.map((article) => {
         if (article.id < props.lotOfArticles)
           return (
