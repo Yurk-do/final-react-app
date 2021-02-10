@@ -1,0 +1,33 @@
+#main-title-container {
+    text-align: center;
+}
+
+#main-title {
+    font-family: 'Washington Text Regular';
+    font-size: 70px;
+    padding: 0;
+    margin: 20px 5px 0px 5px;
+}
+
+#slogan {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+
+@media (max-width: 830px) {
+    #main-title {
+        font-size: 50px;
+        padding: 0;
+        margin: 5px 5px 0px 5px;
+    }
+    #slogan {
+        margin-bottom: 2px;
+        font-size: 10px;
+      
+    }
+}
+
+

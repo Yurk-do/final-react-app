@@ -1,0 +1,32 @@
+
+.container-simple-menu {
+  height: 40px;
+  width: 100%;
+  line-height: normal;
+  text-align: center;
+  background-color: #a9091f;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+.simple-menu {
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.simple-menu > li {
+  margin: 0 15px 0 15px;
+}
+.simple-menu > li > a {
+  font-size: 20px;
+color: white;
+}
+
+.simple-menu > li > a:hover {
+  font-size: 20px;
+color: black;
+}

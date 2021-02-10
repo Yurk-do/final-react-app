@@ -1,0 +1,12 @@
+.links-social-net  > a {
+ font-size: 30px;
+ margin: 10px;
+}
+.links-social-net  > a:hover {
+   color: black;
+}
+   
+
+.links-social-net {
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+.button-form-comments {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px blue;
+    margin-top: 10px;
+  }
+  .button-form-comments > input:not(:last-child) {
+    margin-right: 20px;
+  } 
+  
+  .button-form-comments > input {
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    background: rgba(19, 18, 18, 0.884);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  } 
+  
+  .button-form-comments > input:hover {
+    background:  #a9091f ;
+  }

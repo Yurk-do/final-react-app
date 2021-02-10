@@ -1,0 +1,21 @@
+.slides {
+
+  opacity: 0;
+  transition-duration: 2s ease;
+}
+
+.slides.active {
+  width: 90%;
+  opacity: 1;
+  transition-duration: 2s;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.slide-comment-text {
+  text-align: start;
+}
+
+.slide-comments-autor {
+  text-align: end;
+}
