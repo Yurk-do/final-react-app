@@ -5,6 +5,7 @@ import CurrentDate from "components/header/currentDate/currentDate.js";
 import UserIcon from "components/header/userIcon/userIcon.js";
 import SideBar from "components/header/navbar/sideBar/sideBar.js";
 import Mediaquery from "components/mediaquery/mediaquery.js";
+import { Link } from "react-router-dom";
 
 const HeaderBlock = (props) => (
   <div id="header-container">
@@ -15,8 +16,16 @@ const HeaderBlock = (props) => (
     />
     <MainTitle />
     <Mediaquery
-      componentLarge={<RegistrationButtons />}
-      componentMedium={<RegistrationButtons />}
+      componentLarge={
+        <Link to="/login">
+          <RegistrationButtons />
+        </Link>
+      }
+      componentMedium={
+        <Link to="/login">
+          <RegistrationButtons />
+        </Link>
+      }
       componentSmall={null}
     />
     <UserIcon />

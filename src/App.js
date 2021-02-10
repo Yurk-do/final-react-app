@@ -13,6 +13,7 @@ import Comments from "components/Pages/comments/comments.js";
 import Footer from "components/footer/footer.js";
 import dateISOFormat from "components/helpers/date/dateISOFormat.js";
 import replaceContent from "components/helpers/content/replaceContent.js";
+import LoginPage from "components/Pages/login/loginPage";
 
 function createNews(news) {
   const newNews = news.articles.map((article, index) => ({
@@ -28,7 +29,6 @@ function createNews(news) {
   }));
   return newNews;
 }
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -45,19 +45,19 @@ class App extends React.Component {
   componentDidMount() {
     Promise.all([
       fetch(
-        "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
+        "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
       fetch(
-        "http://newsapi.org/v2/everything?q=tesla&from=2021-01-09&sortBy=publishedAt&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
+        "http://newsapi.org/v2/everything?q=tesla&from=2021-01-10&sortBy=publishedAt&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
       fetch(
-        "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
+        "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
       fetch(
-        "http://newsapi.org/v2/everything?q=apple&from=2021-02-08&to=2021-02-08&sortBy=popularity&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
+        "http://newsapi.org/v2/everything?q=apple&from=2021-02-09&to=2021-02-09&sortBy=popularity&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
       fetch(
-        "http://newsapi.org/v2/everything?domains=wsj.com&apiKey=0ba2dfc2493b41ff91cd4e24e288936b"
+        "http://newsapi.org/v2/everything?domains=wsj.com&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
     ])
       .then(([res1, res2, res3, res4, res5]) =>
@@ -114,6 +114,7 @@ class App extends React.Component {
             />
             <Route path="/comments" component={Comments} />
           </Switch>
+          <Route path="/login" component={LoginPage} />
         </Router>
         <Footer />
       </>

@@ -6,11 +6,9 @@
     align-items: center;
 }
 
-#slogan {
-   
-} 
 
-@media (max-width: 1150px) {
+
+@media (max-width: 1120px) {
     #header-container {
         width: 100%;
         margin: auto;

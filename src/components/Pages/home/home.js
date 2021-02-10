@@ -3,7 +3,6 @@ import NewsBlock from "components/mainContent/mainNews/newsBlock.js";
 import ColumnNews from "components/mainContent/mainNews/columnNews.js";
 import RowNews from "components/mainContent/mainNews/RowNews.js";
 import SliderQuote from "components/sliderQuote/sliderQuote.js";
-import Login from "components/login/login.js";
 
 function Home(props) {
   return (
@@ -40,13 +39,13 @@ function Home(props) {
           titleBlock="Techcrunch"
           path="/techcrunch"
           news={props.news.articlesTechCr}
-          lotOfArticles={5}
+          lotOfArticles={4}
         />
         <RowNews
           titleBlock="Apple News"
           path="/apple"
           news={props.news.articlesApple}
-          lotOfArticles={5}
+          lotOfArticles={4}
         />
       </NewsBlock>
       <SliderQuote />

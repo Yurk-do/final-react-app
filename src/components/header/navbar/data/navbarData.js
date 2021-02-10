@@ -2,7 +2,6 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as GiIcons from "react-icons/gi";
 import * as GrIcons from "react-icons/gr";
-import * as ImIcons from "react-icons/im";
 import * as RiIcons from "react-icons/ri";
 import * as SiIcons from "react-icons/si";
 

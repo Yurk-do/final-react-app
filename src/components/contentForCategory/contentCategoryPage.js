@@ -6,7 +6,7 @@ function ContentCategoryPage({ news }) {
   return (
     <div className="category-news-item">
       <h3 className="category-news-item-title">
-        {sliceContent(news.title, 100)}
+        <a href={news.url}>{sliceContent(news.title, 100)}</a>
       </h3>
       <img
         src={news.urlToImage}

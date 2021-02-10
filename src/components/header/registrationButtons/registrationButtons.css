@@ -23,9 +23,15 @@
     color:  #000;
 }
 
+#button-sign-in:hover {
+    border-top-right-radius: 5px;
+    background-color: #a9091f;
+    color: white;
+  
+}
+
 @media (max-width: 830px) {
     .registration-buttons {
-       
-        font-size: 10px;
+       font-size: 10px;
     }
 }

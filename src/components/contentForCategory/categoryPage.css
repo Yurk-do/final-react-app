@@ -15,4 +15,17 @@
     margin-top: 10px;
 }
   
- 
+@media (max-width: 1150px) {
+  .category-news-container{
+     grid-template-columns: repeat(2, 1fr);
+    }
+  }
+    @media (max-width: 850px) {
+      .category-news-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        align-items: center;
+      }
+  
+  }

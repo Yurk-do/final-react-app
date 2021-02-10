@@ -10,7 +10,7 @@ function SliderComments() {
   const length = sliderData.length;
 
   return (
-    <div className="">
+    <div className="slider-quote">
       <h2 className="slider-title-quote">Quote of the Week</h2>
       <div className="slider-container">
         <SliderButtonPrevious

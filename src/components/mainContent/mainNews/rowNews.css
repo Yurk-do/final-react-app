@@ -19,3 +19,11 @@
     margin-bottom: 20px;
 }
 
+@media (max-width: 1120px) {
+    .row-block-news {
+     flex-flow: row wrap;
+      
+    }
+}
+
+

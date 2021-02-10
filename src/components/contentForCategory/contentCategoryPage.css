@@ -15,6 +15,10 @@
     text-align: justify;
   }
   
+  .category-news-item-title > a:hover {
+    color:rgb(119, 81, 81);
+  }
+ 
  
   .category-news-item-desc {
     padding-top: 10px;
@@ -58,3 +62,16 @@
     float: right;
     margin: 10px;
   }
+
+
+  @media (max-width: 850px) {
+    .category-news-item {
+    position: relative;
+    max-width: 500px;
+    min-height: 400px;
+    padding: 30px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  }
+  
+}
