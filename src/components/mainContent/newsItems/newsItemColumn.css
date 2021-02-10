@@ -1,4 +1,7 @@
-.item-column-title > a:hover {
+.item-column-small-title > a:hover {
+    color:rgb(119, 81, 81)
+}
+.item-column-big-title > a:hover {
     color:rgb(119, 81, 81)
 }
 
