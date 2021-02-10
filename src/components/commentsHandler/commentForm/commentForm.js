@@ -4,7 +4,6 @@ import ButtonFormComments from "components/commentsHandler/buttons/buttonFormCom
 
 const CommentForm = (props) => {
   const [commentText, setCommentText] = useState("");
-  const [count, setCount] = useState(1);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -12,10 +11,8 @@ const CommentForm = (props) => {
       text: commentText,
       userName: "",
       date: Date().toString(),
-      id: 5 + count,
     };
 
-    setCount(count + 1);
     setCommentText("");
 
     props.onCreateComment(comment);

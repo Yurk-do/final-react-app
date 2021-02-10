@@ -2,9 +2,15 @@ import React, { useState, useEffect } from "react";
 import CommentForm from "components/commentsHandler/commentForm/commentForm.js";
 import CommentList from "components/commentsHandler/commentList/commentList.js";
 
-const CommentsHandler = (props) => {
+const CommentsHandler = () => {
   const [comments, setComments] = useState("");
   const url = "http://localhost:5000/comments";
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((comments) => setComments(comments));
+  }, []);
 
   const handleCreateComment = (comment) => {
     fetch(url, {
@@ -13,14 +19,9 @@ const CommentsHandler = (props) => {
       body: JSON.stringify(comment),
     });
 
-    const newComment = [comment, ...comments];
+    const newComment = [...comments, comment];
     setComments(newComment);
   };
-  useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((comments) => setComments(comments));
-  }, []);
 
   return (
     <div id="comments-container">

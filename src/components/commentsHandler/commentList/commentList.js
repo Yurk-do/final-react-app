@@ -4,11 +4,12 @@ import EmptyList from "components/commentsHandler/emptyList/emptyList.js";
 import Comment from "components/commentsHandler/comment/comment.js";
 
 function CommentList({ allComments }) {
+  let newComments = allComments.concat([]);
   return (
     <div className="comment-list-container">
       <ul id="comment-list">
-        {allComments.length > 0 ? (
-          allComments.reverse().map((comment) => (
+        {newComments.length > 0 ? (
+          newComments.reverse().map((comment) => (
             <li key={comment.id}>
               <Comment comment={comment} />
             </li>
