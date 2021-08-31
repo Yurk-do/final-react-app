@@ -29,6 +29,21 @@ function createNews(news) {
   }));
   return newNews;
 }
+
+function newsUnd() {
+  const newsUnd = {
+    author: "Empty",
+    title: "Empty",
+    description: "Empty",
+    urlToImage: null,
+    content: "Sorry, server is not available now",
+    category: "Empty",
+    date: "Empty",
+    url: null,
+  };
+  const array = new Array(9).fill(newsUnd, 0, 9);
+  return array.map((news, index) => (news = { ...news, id: index }));
+}
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -45,19 +60,19 @@ class App extends React.Component {
   componentDidMount() {
     Promise.all([
       fetch(
-        "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
+        "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
       fetch(
-        "http://newsapi.org/v2/everything?q=tesla&from=2021-01-10&sortBy=publishedAt&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
+        "https://newsapi.org/v2/everything?q=tesla&from=2021-03-21&sortBy=publishedAt&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
       fetch(
-        "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
+        "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
       fetch(
-        "http://newsapi.org/v2/everything?q=apple&from=2021-02-09&to=2021-02-09&sortBy=popularity&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
+        "https://newsapi.org/v2/everything?q=apple&from=2021-04-20&to=2021-04-20&sortBy=popularity&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
       fetch(
-        "http://newsapi.org/v2/everything?domains=wsj.com&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
+        "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=e83b2d2cf17f49e9bebf9536d5dca70b"
       ),
     ])
       .then(([res1, res2, res3, res4, res5]) =>
@@ -69,15 +84,24 @@ class App extends React.Component {
           res5.json(),
         ])
       )
-      .then(([data1, data2, data3, data4, data5]) =>
+      .then(([data1, data2, data3, data4, data5]) => {
+        console.log(data1);
+        console.log(data2);
+        console.log(data3);
+        console.log(data4);
+        console.log(data5);
+
         this.setState({
-          articlesTechCr: createNews(data1),
-          articlesTesla: createNews(data2),
-          articlesUSA: createNews(data3),
-          articlesApple: createNews(data4),
-          articlesWSJ: createNews(data5),
-        })
-      );
+          articlesTechCr:
+            data1.status !== "error" ? createNews(data1) : newsUnd(),
+          articlesTesla:
+            data2.status !== "error" ? createNews(data2) : newsUnd(),
+          articlesUSA: data3.status !== "error" ? createNews(data3) : newsUnd(),
+          articlesApple:
+            data4.status !== "error" ? createNews(data4) : newsUnd(),
+          articlesWSJ: data5.status !== "error" ? createNews(data5) : newsUnd(),
+        });
+      });
   }
 
   render() {
